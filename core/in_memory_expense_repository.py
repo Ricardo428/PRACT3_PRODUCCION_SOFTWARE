@@ -3,7 +3,7 @@ from core.expense_service import ExpenseRepository
 
 
 class InMemoryExpenseRepository(ExpenseRepository):
-    def __init__(self):
+    def __init__(self) -> None:
         self._expenses: list[Expense] = []
 
     def save(self, expense: Expense) -> None:

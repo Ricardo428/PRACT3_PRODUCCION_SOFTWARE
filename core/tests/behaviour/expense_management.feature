@@ -40,14 +40,6 @@ Feature: Gestión de gastos
     And elimino el gasto con id 3
     Then el total de dinero gastado debe ser 40 euros
 
-  Scenario: Crear tres gastos de 10, 30, 30 euros y elimino el ultimo gasto la suma son 40 euros
-    Given un gestor de gastos vacío
-    When añado un gasto de 10 euros llamado Raqueta tenis
-    And añado un gasto de 30 euros llamado Pelotas
-    And añado un gasto de 30 euros llamado Raqueta padel
-    And elimino el gasto con id 3
-    Then el total de dinero gastado debe ser 40 euros
-
   Scenario: Sobre un gestor con 20 euros crea tres gastos de 60, 60, 40 euros elimino el primero y el segundo la suma son 100
     Given un gestor con un gasto de 20 euros
     When añado un gasto de 60 euros llamado Bola de bolos
@@ -57,7 +49,7 @@ Feature: Gestión de gastos
     And elimino el gasto con id 2
     Then el total de dinero gastado debe ser 100 euros
 
-  Scenario: Crea dos gastos de 60, 60 euros elimino el primero y comprobamos que en el mes actual Marzo la suma es 70
+  Scenario: Crear dos gastos con fechas específicas y comprobar la suma mensual
     Given un gestor de gastos vacío
     When añado un gasto de 10 euros llamado Bolos en la fecha 2026-03-09
     And añado un gasto de 60 euros llamado Mando de televisión en la fecha 2026-03-09
